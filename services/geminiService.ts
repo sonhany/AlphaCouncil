@@ -133,7 +133,7 @@ async function safeGenerate(
         const fallbackConfig: AgentConfig = {
             ...config,
             modelProvider: ModelProvider.GEMINI,
-            modelName: 'gemini-2.5-flash'
+            modelName: 'gemini-3.8-flash'
         };
         
         try {
