@@ -257,12 +257,12 @@ const AgentCard: React.FC<AgentCardProps> = ({ config, content, isLoading, isPen
              <div className="text-[10px] uppercase text-slate-400 mb-1 ml-0.5">模型 (Model)</div>
              {isGeminiAgent ? (
                  <div className="w-full bg-slate-900/50 text-xs text-slate-400 border border-white/5 rounded px-2 py-1.5 cursor-not-allowed italic flex items-center justify-between">
-                    <span>Gemini 2.5 Flash</span>
+                    <span>Gemini 3.8 Flash</span>
                     <span className="text-[9px] bg-blue-500/20 text-blue-300 px-1 rounded">AUTO</span>
                  </div>
              ) : isDeepSeekAgent ? (
                  <div className="w-full bg-slate-900/50 text-xs text-slate-400 border border-white/5 rounded px-2 py-1.5 cursor-not-allowed italic flex items-center justify-between">
-                    <span>DeepSeek Chat</span>
+                    <span>DeepSeek Flash</span>
                     <span className="text-[9px] bg-purple-500/20 text-purple-300 px-1 rounded">AUTO</span>
                  </div>
              ) : null}
