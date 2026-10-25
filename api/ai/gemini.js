@@ -36,7 +36,7 @@ export default async function handler(req, res) {
     const ai = new GoogleGenAI({ apiKey: effectiveApiKey });
     
     const response = await ai.models.generateContent({
-      model: model || 'gemini-2.5-flash',
+      model: model || 'gemini-3.8-flash',
       contents: prompt,
       config: {
         temperature: temperature || 0.7,
