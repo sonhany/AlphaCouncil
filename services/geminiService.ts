@@ -51,7 +51,8 @@ export async function generateAgentResponse(
       });
 
       if (!response.ok) {
-        throw new Error(`Gemini API 错误: ${response.statusText}`);
+        const err = await response.json().catch(() => ({}));
+        throw new Error(`Gemini API 错误: ${err.error || 'HTTP ' + response.status}`);
       }
 
       const data = await response.json();
@@ -75,7 +76,7 @@ export async function generateAgentResponse(
 
       if (!response.ok) {
         const err = await response.json();
-        throw new Error(`DeepSeek API 错误: ${err.error || response.statusText}`);
+        throw new Error(`DeepSeek API 错误: ${err.error || 'HTTP ' + response.status}`);
       }
 
       const data = await response.json();
@@ -98,7 +99,7 @@ export async function generateAgentResponse(
 
       if (!response.ok) {
         const err = await response.json();
-        throw new Error(`Qwen API 错误: ${err.error || response.statusText}`);
+        throw new Error(`Qwen API 错误: ${err.error || 'HTTP ' + response.status}`);
       }
 
       const data = await response.json();
